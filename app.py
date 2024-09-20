@@ -64,8 +64,8 @@ detected_emotion = "Neutral"
 @app.route('/get_started', methods=['GET', 'POST'])
 def get_started():
     global detected_emotion  # Reference the global variable
-    classifier = load_model(r'C:\Users\ANKAN ROY\Desktop\Smart Perfume Dispenser\Flask\model\emotion_detection_model.h5')
-    face_classifier = cv2.CascadeClassifier(r'C:\Users\ANKAN ROY\Desktop\Smart Perfume Dispenser\Flask\haarcascade\haarcascade_frontalface.xml')
+    classifier = load_model('./model/emotion_detection_model.h5')
+    face_classifier = cv2.CascadeClassifier('./haarcascade/haarcascade_frontalface.xml')
 
     emotion_labels = ['Angry', 'Disgust', 'Fear', 'Happy', 'Neutral', 'Sad', 'Surprise']
 
